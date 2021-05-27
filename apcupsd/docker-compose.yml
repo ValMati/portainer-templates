@@ -1,0 +1,10 @@
+version: "2"
+
+services:
+
+  apcupsd:
+    container_name: apcupsd
+    image: valmati/apcupsd:latest
+    restart: unless-stopped
+    volumes:
+      - /tmp/apcupsd-docker:/tmp/apcupsd-docker

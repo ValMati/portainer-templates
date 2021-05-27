@@ -1,0 +1,19 @@
+watch:
+  workers: 5
+  schedule: "0 3 * * *"
+  firstCheckNotif: true
+  healthchecks:
+    baseURL: https://hc-ping.com/
+    uuid: <your-uuid>
+
+notif:
+  telegram:
+    token: <your-bot-token>
+    chatIDs:
+      - <your-id>
+      - <other-id>
+
+providers:
+  docker:
+    watchByDefault: true
+    watchStopped: true
