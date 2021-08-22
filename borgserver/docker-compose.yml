@@ -1,0 +1,23 @@
+version: "2"
+
+services:
+    borgserver:
+        container_name: borgserver
+        image: valmati/borgserver
+        hostname: borgserver
+        environment:
+            - UID=1000
+            - GID=1000
+        ports:
+            - "2222:22"
+        volumes:
+            - borgserver_host_keys:/etc/ssh/host_keys/
+            - borgserver_authorized_keys:/etc/authorized_keys/:ro
+            - /mnt/disk/backups:/backups
+        restart: unless-stopped
+
+volumes:
+  host_keys:
+    driver: local
+  authorized_keys:
+    driver: local
