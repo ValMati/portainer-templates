@@ -5,6 +5,16 @@ services:
   apcupsd:
     container_name: apcupsd
     image: valmati/apcupsd:latest
-    restart: unless-stopped
+    hostname: hostname
+    environment:
+      - TZ=Europe/Madrid
+      - BOT_TOKEN=123:ABC
+      - CHAT_ID=-123
+      - HEALTH_CHECK=https://hc-ping.com/your-uuid-here
+      - SCHEDULE=37 3 * * *
     volumes:
       - /tmp/apcupsd-docker:/tmp/apcupsd-docker
+    devices:
+      - /dev/hidraw0:/dev/hidraw0
+      - /dev/usb/hiddev0:/dev/usb/hiddev0    
+    restart: unless-stopped
