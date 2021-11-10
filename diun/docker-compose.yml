@@ -6,18 +6,12 @@ services:
     container_name: diun
     image: crazymax/diun:latest
     volumes:      
-      - diun_data:/data
-      - /usr/share/diun-docker/diun.yml:/diun.yml:ro
-      - /usr/share/diun-docker/custom-images.yml:/custom-images.yml:ro
+      - /media/hd1/appdata/diun/data:/data
+      - /media/hd1/appdata/diun/config/diun.yml:/diun.yml:ro
+      - /media/hd1/appdata/diun/config/custom-images.yml:/custom-images.yml:ro
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - "TZ=Europe/Madrid"
       - "LOG_LEVEL=info"
       - "LOG_JSON=false"
-      - "DIUN_PROVIDERS_FILE_FILENAME=/custom-images.yml"
     restart: unless-stopped
-
-volumes:
-  data:
-    driver: local
-  

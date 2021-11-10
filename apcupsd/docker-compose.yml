@@ -5,7 +5,7 @@ services:
   apcupsd:
     container_name: apcupsd
     image: valmati/apcupsd:latest
-    hostname: hostname
+    hostname: RaspNAS
     environment:
       - TZ=Europe/Madrid
       - BOT_TOKEN=123:ABC

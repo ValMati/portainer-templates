@@ -6,16 +6,16 @@ services:
         image: valmati/borgserver
         hostname: borgserver
         environment:
-            - UID=1000
-            - GID=1000
+            - UID=1001
+            - GID=1001
             - TZ=Europe/Madrid
             - RESTRICT_TO_PATH=true
         ports:
             - "2222:22"
         volumes:
-            - borgserver_host_keys:/etc/ssh/host_keys/
-            - borgserver_authorized_keys:/etc/authorized_keys/:ro
-            - /mnt/disk/backups:/backups
+            - /media/hd1/appdata/borgserver/host_keys:/etc/ssh/host_keys/
+            - /media/hd1/appdata/borgserver/authorized_keys:/etc/authorized_keys/:ro
+            - /media/hd1/backups:/backups
         restart: unless-stopped
 
 volumes:

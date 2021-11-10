@@ -32,8 +32,8 @@ services:
       - TZ='Europe/Madrid'
       - DNSMASQ_LISTENING=all
     volumes:
-      - pihole_etc:/etc/pihole
-      - pihole_dnsmasqd:/etc/dnsmasq.d
+      - etc:/etc/pihole
+      - dnsmasqd:/etc/dnsmasq.d
     networks:
       net:
         ipv4_address: 10.8.1.100

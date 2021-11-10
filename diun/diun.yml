@@ -1,6 +1,6 @@
 watch:
   workers: 5
-  schedule: "0 3 * * *"
+  schedule: "27 */6 * * *"
   firstCheckNotif: true
   healthchecks:
     baseURL: https://hc-ping.com/
@@ -17,3 +17,5 @@ providers:
   docker:
     watchByDefault: true
     watchStopped: true
+  file:
+    filename: custom-images.yml

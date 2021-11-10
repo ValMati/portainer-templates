@@ -1,0 +1,18 @@
+version: "2"
+
+services:
+
+  filebrowser:
+    container_name: filebrowser
+    image: filebrowser/filebrowser:latest
+    restart: unless-stopped
+    user: 1001:1001
+    ports:
+      - "8080:80/tcp"
+    environment:
+      - TZ='Europe/Madrid'
+    volumes:
+    - /media/hd1/appdata/filebrowser/srv:/srv
+    - /media/hd1/appdata/filebrowser/database.db:/database.db
+    - /media/hd1/appdata/filebrowser/.filebrowser.json:/.filebrowser.json
+ 
