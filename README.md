@@ -10,6 +10,7 @@ Collection of Portainer templates
 | [File Browser](filebrowser/) | A self-hosted GUID to explore the contain of the server. |
 | [Heimdall](heimdall/) | A dashboard for all your web applications. It doesn't need to be limited to applications though, you can add links to anything you like. |
 | [Pi-hole + Cloudflared](pihole/) | Pi-hole is a network-level advertisement and Internet tracker blocking application.<br>Cloudflared is a proxy-dns over HTTPS. |
+| [Synching](syncthing/) | A continuous file synchronization program. |
 
 IMPORTANT: The docker-compose.yml files in this repository are designed to run inside Portainer, there are differences between docker-compose and Portainer, so they may not work properly with docker-compose.
 
