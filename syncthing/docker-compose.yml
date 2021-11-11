@@ -2,18 +2,17 @@ version: "2.1"
 
 services:
   syncthing:
-    image: ghcr.io/linuxserver/syncthing
+    image: syncthing/syncthing
     container_name: syncthing
-    hostname: syncthing #optional
+    hostname: syncthing
     environment:
       - PUID=1001
       - PGID=1001
-      - TZ=Europe/Madrid
     volumes:
-      - /media/hd1/appdata/syncthing/config:/config
+      - /media/hd1/appdata/syncthing/config:/var/syncthing/config
       - /media/hd1/appdata/syncthing/sync:/data1
     ports:
       - 8384:8384
-      - 22000:22000
-      - 21027:21027/udp
+      - 22000:22000/tcp
+      - 22000:22000/udp
     restart: unless-stopped
