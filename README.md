@@ -9,6 +9,7 @@ Collection of Portainer templates
 | [DIUN](diun/) | Docker Image Update Notifier is a CLI application written in Go to receive notifications when a Docker image is updated on a Docker registry. |
 | [File Browser](filebrowser/) | A self-hosted GUID to explore the contain of the server. |
 | [Heimdall](heimdall/) | A dashboard for all your web applications. It doesn't need to be limited to applications though, you can add links to anything you like. |
+| [Jellyfin](jellyfin/) | Media server. |
 | [Pi-hole + Cloudflared](pihole/) | Pi-hole is a network-level advertisement and Internet tracker blocking application.<br>Cloudflared is a proxy-dns over HTTPS. |
 | [Synching](syncthing/) | A continuous file synchronization program. |
 
