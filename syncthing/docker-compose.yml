@@ -9,7 +9,7 @@ services:
       - PUID=1001
       - PGID=1001
     volumes:
-      - /media/hd1/appdata/syncthing/config:/var/syncthing/config
+      - /media/hd1/appdata/syncthing:/var/syncthing
       - /media/hd1/appdata/syncthing/sync:/data1
     ports:
       - 8384:8384

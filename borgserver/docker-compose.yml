@@ -17,9 +17,3 @@ services:
             - /media/hd1/appdata/borgserver/authorized_keys:/etc/authorized_keys/:ro
             - /media/hd1/backups:/backups
         restart: unless-stopped
-
-volumes:
-  host_keys:
-    driver: local
-  authorized_keys:
-    driver: local
